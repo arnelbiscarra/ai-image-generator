@@ -49,13 +49,13 @@ export function ImageCarouselHero({
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2" style={{ fontFamily: "var(--font-cormorant-garamond)" }}>Explore The Island</p>
           <h2 className="text-3xl sm:text-4xl text-foreground" style={{ fontFamily: "var(--font-bebas-neue)" }}>What's Nearby</h2>
         </div>
         <div
-          className="relative w-full max-w-6xl h-96 sm:h-[500px] mb-12 sm:mb-16"
+          className="relative w-full max-w-3xl h-[420px] sm:h-[480px] mb-8"
           onMouseMove={handleMouseMove}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
@@ -72,7 +72,7 @@ export function ImageCarouselHero({
               return (
                 <div
                   key={image.id}
-                  className="absolute w-32 h-40 sm:w-40 sm:h-48 transition-all duration-300"
+                  className="absolute w-36 h-44 sm:w-44 sm:h-56 transition-all duration-300"
                   style={{
                     transform: `translate(${x}px, ${y}px) rotateX(${perspectiveY}deg) rotateY(${perspectiveX}deg) rotateZ(${image.rotation}deg)`,
                     transformStyle: "preserve-3d",
