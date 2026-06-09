@@ -49,14 +49,14 @@ export function ImageCarouselHero({
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div
           className="relative w-full max-w-3xl h-[490px] sm:h-[550px]"
           onMouseMove={handleMouseMove}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          <div className="absolute inset-0 flex items-center justify-center perspective" style={{ transform: "translateY(-40px)" }}>
+          <div className="absolute inset-0 flex items-center justify-center perspective">
             {images.map((image, index) => {
               const angle = (rotatingCards[index] || 0) * (Math.PI / 180)
               const radius = 230
