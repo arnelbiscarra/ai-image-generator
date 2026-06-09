@@ -51,8 +51,8 @@ export function ImageCarouselHero({
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-2">Explore The Island</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">What's Nearby</h2>
+          <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2" style={{ fontFamily: "var(--font-cormorant-garamond)" }}>Explore The Island</p>
+          <h2 className="text-3xl sm:text-4xl text-foreground" style={{ fontFamily: "var(--font-bebas-neue)" }}>What's Nearby</h2>
         </div>
         <div
           className="relative w-full max-w-6xl h-96 sm:h-[500px] mb-12 sm:mb-16"
