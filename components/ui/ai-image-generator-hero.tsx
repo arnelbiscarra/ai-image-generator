@@ -50,6 +50,10 @@ export function ImageCarouselHero({
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-2">Explore The Island</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">What's Nearby</h2>
+        </div>
         <div
           className="relative w-full max-w-6xl h-96 sm:h-[500px] mb-12 sm:mb-16"
           onMouseMove={handleMouseMove}
