@@ -45,13 +45,22 @@ export function ImageCarouselHero({
   }
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden" style={{ backgroundColor: "#EDE8E3" }}>
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl animate-pulse" />
-      </div>
+    <div className="relative w-full min-h-screen overflow-hidden">
+      {/* Video background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 0 }}
+      >
+        <source src="https://videos.pexels.com/video-files/30045513/12888524_2560_1440_30fps.mp4" type="video/mp4" />
+      </video>
+      {/* Black overlay 30% opacity */}
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.30)", zIndex: 1 }} />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div
           className="relative w-full max-w-4xl h-[600px] sm:h-[700px]"
         >
