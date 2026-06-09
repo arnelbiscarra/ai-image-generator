@@ -52,9 +52,6 @@ export function ImageCarouselHero({
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div
           className="relative w-full max-w-3xl h-[490px] sm:h-[550px]"
-          onMouseMove={handleMouseMove}
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
         >
           <div className="absolute inset-0 flex items-center justify-center perspective">
             {images.map((image, index) => {
@@ -75,21 +72,16 @@ export function ImageCarouselHero({
                   }}
                 >
                   <div
-                    className={cn(
-                      "relative w-full h-full rounded-2xl overflow-hidden shadow-2xl",
-                      "transition-all duration-300 hover:shadow-3xl hover:scale-110",
-                      "cursor-pointer group",
-                    )}
+                    className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl"
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     <Image
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover"
                       priority={index < 3}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
               )
