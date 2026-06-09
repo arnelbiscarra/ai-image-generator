@@ -22,10 +22,12 @@ export function ImageCarouselHero({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
   const [rotatingCards, setRotatingCards] = useState<number[]>([])
+  const [centerRotation, setCenterRotation] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRotatingCards((prev) => prev.map((_, i) => (prev[i] + 0.5) % 360))
+      setCenterRotation((prev) => (prev + 1) % 360)
     }, 50)
     return () => clearInterval(interval)
   }, [])
@@ -53,6 +55,22 @@ export function ImageCarouselHero({
         <div
           className="relative w-full max-w-3xl h-[490px] sm:h-[550px]"
         >
+          {/* Center rotating image */}
+          <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+            <div
+              className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-2xl"
+              style={{ transform: `rotate(${centerRotation}deg)` }}
+            >
+              <Image
+                src="https://arnelbiscarra.great-site.net/wp-content/uploads/2026/06/alienbeach.png"
+                alt="Center logo"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
           <div className="absolute inset-0 flex items-center justify-center perspective">
             {images.map((image, index) => {
               const angle = (rotatingCards[index] || 0) * (Math.PI / 180)
