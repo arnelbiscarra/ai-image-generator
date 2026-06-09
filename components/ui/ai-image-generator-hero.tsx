@@ -50,10 +50,6 @@ export function ImageCarouselHero({
       </div>
 
       <div className="relative z-10 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-40 z-20 relative">
-          <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2" style={{ fontFamily: "var(--font-cormorant-garamond)" }}>Explore The Island</p>
-          <h2 className="text-3xl sm:text-4xl text-foreground" style={{ fontFamily: "var(--font-bebas-neue)" }}>What's Nearby</h2>
-        </div>
         <div
           className="relative w-full max-w-3xl h-[490px] sm:h-[550px]"
           onMouseMove={handleMouseMove}
