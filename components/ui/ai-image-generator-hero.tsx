@@ -55,7 +55,7 @@ export function ImageCarouselHero({
           <h2 className="text-3xl sm:text-4xl text-foreground" style={{ fontFamily: "var(--font-bebas-neue)" }}>What's Nearby</h2>
         </div>
         <div
-          className="relative w-full max-w-3xl h-[420px] sm:h-[480px]"
+          className="relative w-full max-w-3xl h-[440px] sm:h-[500px]"
           onMouseMove={handleMouseMove}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
