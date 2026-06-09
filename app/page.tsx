@@ -16,11 +16,6 @@ export default function Home() {
 
   return (
     <ImageCarouselHero
-      title="Create Stunning AI Generated Photos Instantly"
-      subtitle="AI Photo Generation"
-      description="Transform your ideas into breathtaking visuals with cutting-edge AI technology"
-      ctaText="Start Generating Now"
-      onCtaClick={() => console.log("CTA clicked!")}
       images={demoImages}
     />
   )
