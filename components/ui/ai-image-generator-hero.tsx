@@ -63,7 +63,7 @@ export function ImageCarouselHero({
           <div className="absolute inset-0 flex items-center justify-center perspective">
             {images.map((image, index) => {
               const angle = (rotatingCards[index] || 0) * (Math.PI / 180)
-              const radius = 180
+              const radius = 280
               const x = Math.cos(angle) * radius
               const y = Math.sin(angle) * radius
               const perspectiveX = (mousePosition.x - 0.5) * 20
