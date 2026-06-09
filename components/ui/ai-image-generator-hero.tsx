@@ -60,7 +60,7 @@ export function ImageCarouselHero({
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          <div className="absolute inset-0 flex items-center justify-center perspective">
+          <div className="absolute inset-0 flex items-center justify-center perspective" style={{ transform: "translateY(-40px)" }}>
             {images.map((image, index) => {
               const angle = (rotatingCards[index] || 0) * (Math.PI / 180)
               const radius = 230
