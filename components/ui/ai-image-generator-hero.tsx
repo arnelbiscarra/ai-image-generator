@@ -55,7 +55,7 @@ export function ImageCarouselHero({
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 0 }}
       >
-        <source src="https://videos.pexels.com/video-files/30045513/12888524_2560_1440_30fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/5025519/5025519-hd_1920_1080_30fps.mp4" type="video/mp4" />
       </video>
       {/* Black overlay 30% opacity */}
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.30)", zIndex: 1 }} />
