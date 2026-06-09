@@ -53,7 +53,7 @@ export function ImageCarouselHero({
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div
-          className="relative w-full max-w-3xl h-[490px] sm:h-[550px]"
+          className="relative w-full max-w-4xl h-[600px] sm:h-[700px]"
         >
           {/* Center rotating image */}
           <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
@@ -74,7 +74,7 @@ export function ImageCarouselHero({
           <div className="absolute inset-0 flex items-center justify-center perspective">
             {images.map((image, index) => {
               const angle = (rotatingCards[index] || 0) * (Math.PI / 180)
-              const radius = 230
+              const radius = 310
               const x = Math.cos(angle) * radius
               const y = Math.sin(angle) * radius
               const perspectiveX = (mousePosition.x - 0.5) * 20
